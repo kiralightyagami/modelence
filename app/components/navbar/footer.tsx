@@ -8,18 +8,12 @@ export default function Footer() {
         {/* Logo and Copyright Section */}
         <div className="lg:col-span-2">
           <div className="flex items-center gap-2 mb-6">
-            <div className="w-8 h-8 bg-white rounded-md flex items-center justify-center">
               <Image
-                src="/icons/modelence-logo.svg"
+                src="https://modelence.com/modelence-logo.svg"
                 alt="Modelence"
-                width={24}
-                height={24}
-                className="text-black"
+                width={120}
+                height={120}
               />
-            </div>
-            <span className="text-neutral-900 dark:text-white text-xl font-semibold">
-              Modelence
-            </span>
           </div>
           <p className="text-neutral-500 dark:text-gray-400 text-sm">
            <span className="text-neutral-900 dark:text-white">©</span> copyright Modelence 2025. All rights reserved.
