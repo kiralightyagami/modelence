@@ -39,6 +39,17 @@
   --color-surface: var(--color-white);
   --color-border: var(--color-neutral-300);
   --color-muted: var(--color-neutral-400);
+
+  --animate-move: move 5s linear infinite;
+ 
+  @keyframes move {
+    0% {
+      transform: translateX(-200px);
+    }
+    100% {
+      transform: translateX(200px);
+    }
+  }
 }
 
 .dark {

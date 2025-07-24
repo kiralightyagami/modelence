@@ -5,6 +5,8 @@ import { GetStartedButton } from './ui/get-started-button'
 import { BackgroundBeams } from './ui/background-beams'
 import { BackgroundBeamsLight } from './ui/background-beams-light'
 import { useTheme } from '../lib/theme-context'
+import { BentoGrid, BentoGridItem } from './ui/card'
+import { CardDemo, CardDemoLight } from './works-with'
 
 export const Hero = () => {
   const { theme } = useTheme()
@@ -22,6 +24,13 @@ export const Hero = () => {
         Ship production AI apps 10x faster with built-in auth, database and LLM integration
         </div>
        <GetStartedButton />
+       <div className='mt-10 w-full'>
+       <div className="flex items-center justify-center mb-4">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300">WORKS WITH</p>
+        </div>
+       {theme === 'dark' ? <CardDemo /> : <CardDemoLight />}
+       </div>
+       
     </div>
   )
 }
