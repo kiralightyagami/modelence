@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 export const TextHoverEffect = ({
   text,
   duration,
+  automatic,
 }: {
   text: string;
   duration?: number;
@@ -111,7 +112,7 @@ export const TextHoverEffect = ({
           strokeDasharray: 1000,
         }}
         transition={{
-          duration: 4,
+          duration: automatic ? 0 : 4,
           ease: "easeInOut",
         }}
       >

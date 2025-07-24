@@ -23,7 +23,7 @@ export default function Home() {
         </div>
         </div>
         <FeaturesSectionDemo /> 
-       <TextHoverEffect text="Modelence" duration={1} />
+       <TextHoverEffect text="Modelence" duration={1} automatic={true} />
        <Footer />
       </Container>
     </div>
