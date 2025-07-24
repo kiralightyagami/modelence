@@ -185,29 +185,79 @@ const SkeletonLight = () => {
 };
 
 const Sparkles = () => {
-  const randomMove = () => Math.random() * 2 - 1;
-  const randomOpacity = () => Math.random();
-  const random = () => Math.random();
+  const [mounted, setMounted] = useState(false);
+  const [sparkleData, setSparkleData] = useState<Array<{
+    top: number;
+    left: number;
+    animateTop: number;
+    animateLeft: number;
+    topMove: number;
+    leftMove: number;
+    opacity: number;
+    duration: number;
+  }>>([]);
+
+  useEffect(() => {
+    const generateSparkleData = () => {
+      return Array.from({ length: 12 }, () => ({
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+        animateTop: Math.random() * 100,
+        animateLeft: Math.random() * 100,
+        topMove: Math.random() * 2 - 1,
+        leftMove: Math.random() * 2 - 1,
+        opacity: Math.random(),
+        duration: Math.random() * 2 + 4,
+      }));
+    };
+
+    setSparkleData(generateSparkleData());
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="absolute inset-0">
+        {[...Array(12)].map((_, i) => (
+          <span
+            key={`star-${i}`}
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              width: "2px",
+              height: "2px",
+              borderRadius: "50%",
+              zIndex: 1,
+              opacity: 0,
+            }}
+            className="inline-block bg-black dark:bg-white"
+          ></span>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className="absolute inset-0">
-      {[...Array(12)].map((_, i) => (
+      {sparkleData.map((sparkle, i) => (
         <motion.span
           key={`star-${i}`}
           animate={{
-            top: `calc(${random() * 100}% + ${randomMove()}px)`,
-            left: `calc(${random() * 100}% + ${randomMove()}px)`,
-            opacity: randomOpacity(),
+            top: `calc(${sparkle.animateTop}% + ${sparkle.topMove}px)`,
+            left: `calc(${sparkle.animateLeft}% + ${sparkle.leftMove}px)`,
+            opacity: sparkle.opacity,
             scale: [1, 1.2, 0],
           }}
           transition={{
-            duration: random() * 2 + 4,
+            duration: sparkle.duration,
             repeat: Infinity,
             ease: "linear",
           }}
           style={{
             position: "absolute",
-            top: `${random() * 100}%`,
-            left: `${random() * 100}%`,
+            top: `${sparkle.top}%`,
+            left: `${sparkle.left}%`,
             width: `2px`,
             height: `2px`,
             borderRadius: "50%",
@@ -221,29 +271,79 @@ const Sparkles = () => {
 };
 
 const SparklesLight = () => {
-  const randomMove = () => Math.random() * 2 - 1;
-  const randomOpacity = () => Math.random();
-  const random = () => Math.random();
+  const [mounted, setMounted] = useState(false);
+  const [sparkleData, setSparkleData] = useState<Array<{
+    top: number;
+    left: number;
+    animateTop: number;
+    animateLeft: number;
+    topMove: number;
+    leftMove: number;
+    opacity: number;
+    duration: number;
+  }>>([]);
+
+  useEffect(() => {
+    const generateSparkleData = () => {
+      return Array.from({ length: 12 }, () => ({
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+        animateTop: Math.random() * 100,
+        animateLeft: Math.random() * 100,
+        topMove: Math.random() * 2 - 1,
+        leftMove: Math.random() * 2 - 1,
+        opacity: Math.random(),
+        duration: Math.random() * 2 + 4,
+      }));
+    };
+
+    setSparkleData(generateSparkleData());
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="absolute inset-0">
+        {[...Array(12)].map((_, i) => (
+          <span
+            key={`light-star-${i}`}
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              width: "2px",
+              height: "2px",
+              borderRadius: "50%",
+              zIndex: 1,
+              opacity: 0,
+            }}
+            className="inline-block bg-blue-400"
+          ></span>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className="absolute inset-0">
-      {[...Array(12)].map((_, i) => (
+      {sparkleData.map((sparkle, i) => (
         <motion.span
           key={`light-star-${i}`}
           animate={{
-            top: `calc(${random() * 100}% + ${randomMove()}px)`,
-            left: `calc(${random() * 100}% + ${randomMove()}px)`,
-            opacity: randomOpacity(),
+            top: `calc(${sparkle.animateTop}% + ${sparkle.topMove}px)`,
+            left: `calc(${sparkle.animateLeft}% + ${sparkle.leftMove}px)`,
+            opacity: sparkle.opacity,
             scale: [1, 1.2, 0],
           }}
           transition={{
-            duration: random() * 2 + 4,
+            duration: sparkle.duration,
             repeat: Infinity,
             ease: "linear",
           }}
           style={{
             position: "absolute",
-            top: `${random() * 100}%`,
-            left: `${random() * 100}%`,
+            top: `${sparkle.top}%`,
+            left: `${sparkle.left}%`,
             width: `2px`,
             height: `2px`,
             borderRadius: "50%",

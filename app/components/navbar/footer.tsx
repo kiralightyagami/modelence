@@ -22,7 +22,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-neutral-500 dark:text-gray-400 text-sm">
-            © copyright Modelence 2025. All rights reserved.
+           <span className="text-neutral-900 dark:text-white">©</span> copyright Modelence 2025. All rights reserved.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default function Footer() {
             <li>
               <a
                 href="https://modelence.com/contact"
-                className="text-neutral-600 dark:text-gray-300 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
+                className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
               >
                 Pricing
               </a>
@@ -43,7 +43,7 @@ export default function Footer() {
             <li>
               <a
                 href="https://modelence.com/contact"
-                className="text-neutral-600 dark:text-gray-300 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
+                className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
               >
                 Contact Us
               </a>
@@ -51,7 +51,7 @@ export default function Footer() {
             <li>
               <a
                 href="https://docs.modelence.com/"
-                className="text-neutral-600 dark:text-gray-300 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
+                className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
               >
                 Documentation
               </a>
@@ -68,7 +68,7 @@ export default function Footer() {
             <li>
               <a
                 href="https://facebook.com/modelence"
-                className="text-neutral-600 dark:text-gray-300 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
+                className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
               >
                 Facebook
               </a>
@@ -76,7 +76,7 @@ export default function Footer() {
             <li>
               <a
                 href="https://github.com/modelence/modelence"
-                className="text-neutral-600 dark:text-gray-300 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
+                className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
               >
                 Github
               </a>
@@ -84,7 +84,7 @@ export default function Footer() {
             <li>
               <a
                 href="https://linkedin.com/company/modelence"
-                className="text-neutral-600 dark:text-gray-300 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
+                className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
               >
                 LinkedIn
               </a>
@@ -101,7 +101,7 @@ export default function Footer() {
             <li>
               <a
                 href="https://modelence.com/privacy"
-                className="text-neutral-600 dark:text-gray-300 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
+                className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
               >
                 Privacy Policy
               </a>
@@ -109,7 +109,7 @@ export default function Footer() {
             <li>
               <a
                 href="https://modelence.com/terms"
-                className="text-neutral-600 dark:text-gray-300 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
+                className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors duration-200"
               >
                 Terms of Service
               </a>

@@ -66,7 +66,7 @@ export const Navbar = () => {
     }
   });
   return (
-    <Container>
+    <Container className="mt-10">
       <motion.nav
         style={{
           boxShadow: scrolled ? "var(--shadow-input)" : "none",
