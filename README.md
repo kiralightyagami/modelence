@@ -1,7 +1,7 @@
 # Modelence
 
 <div align="center">
-  <img src="public/icons/modelence-logo.svg" alt="Modelence Logo" width="200" height="200">
+  <img src="https://modelence.com/modelence-logo.svg" alt="Modelence Logo" width="200" height="200">
   
   **All-in-one TypeScript Platform for Startups**
   
