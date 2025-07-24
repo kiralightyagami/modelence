@@ -22,7 +22,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-neutral-500 dark:text-gray-400 text-sm">
-            © copyright Modelence 2024. All rights reserved.
+            © copyright Modelence 2025. All rights reserved.
           </p>
         </div>
 

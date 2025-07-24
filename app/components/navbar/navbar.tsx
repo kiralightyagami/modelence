@@ -17,19 +17,19 @@ export const Navbar = () => {
   const navItems = [
     {
       label: "Hackathon",
-      href: "/hackathon",
+      href: "https://modelence.com/hackathon",
     },
     {
       label: "Cloud",
-      href: "/cloud",
+      href: "https://modelence.com/cloud",
     },
     {
       label: "Docs",
-      href: "/docs",
+      href: "https://docs.modelence.com/",
     },
     {
       label: "Contact Us",
-      href: "/contact",
+      href: "https://modelence.com/contact",
     },
   ];
 
@@ -116,7 +116,7 @@ export const Navbar = () => {
           ))}
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <Link href="/">
+            <Link href="https://github.com/modelence/modelence">
               <IconBrandGithub className="h-6 w-6 text-neutral-700 dark:text-white" />
             </Link>
           </div>

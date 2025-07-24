@@ -30,7 +30,6 @@ export const Hero = () => {
         </div>
        {theme === 'dark' ? <CardDemo /> : <CardDemoLight />}
        </div>
-       
     </div>
   )
 }
